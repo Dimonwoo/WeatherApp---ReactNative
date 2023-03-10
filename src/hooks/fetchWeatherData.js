@@ -15,4 +15,16 @@ const fetchWeatherData = async (latitude, longitude) => {
   }
 };
 
-export default fetchWeatherData;
+const fetchWeatherDataByCity = async city => {
+  try {
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
+    const response = await axios.get(url);
+    const data = response.data;
+    return data;
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+};
+
+export {fetchWeatherData, fetchWeatherDataByCity};
