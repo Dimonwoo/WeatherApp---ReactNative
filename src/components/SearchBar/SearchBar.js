@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {View, TextInput, TouchableOpacity, Text} from 'react-native';
 import {fetchWeatherDataByCity} from '../../hooks/fetchWeatherData';
+import Icon from 'react-native-vector-icons/EvilIcons';
 
 import styles from './SearchBar.style';
 
@@ -19,10 +20,15 @@ const SearchBar = ({cityData}) => {
         onChangeText={text => setCity(text)}
         placeholder="Search city..."
         value={city}
+        placeholderTextColor="gray"
       />
-      <TouchableOpacity onPress={handleSearch}>
-        <Text style={styles.button_text}>Search</Text>
-      </TouchableOpacity>
+      <Icon
+        onPress={handleSearch}
+        name="search"
+        size={35}
+        color="gray"
+        style={styles.icon}
+      />
     </View>
   );
 };

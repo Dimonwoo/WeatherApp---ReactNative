@@ -8,6 +8,7 @@ const Loading = () => {
       <LottieView
         source={require('../../assets/lottie/loading1.json')}
         autoPlay
+        style={{flex: 1}}
       />
     </View>
   );
