@@ -19,6 +19,7 @@ const App = () => {
   const [searchedData, setSearchedData] = useState(null);
 
   useEffect(() => {
+    // When the application is opened, it takes the weather information according to the location of our device using the fetchWeatherData function and adds it to the weatherData state.
     Geolocation.getCurrentPosition(
       position => {
         const {latitude, longitude} = position.coords;
@@ -40,11 +41,8 @@ const App = () => {
     );
   }, []);
 
-  const handleCityData = data => {
-    setSearchedData(data);
-  };
-
   const getBackgroundImage = description => {
+    // Selects the appropriate background image based on the description data from the API. It then assigns it to the backgroundImage variable.
     const images = {
       Rain: require('./assets/images/rainy.jpg'),
       Clouds: require('./assets/images/clouds.jpg'),
@@ -60,6 +58,10 @@ const App = () => {
     const description = (searchedData || weatherData).weather[0].main;
     backgroundImage = getBackgroundImage(description);
   }
+
+  const handleCityData = data => {
+    setSearchedData(data);
+  };
 
   if (loading) {
     return <Loading />;

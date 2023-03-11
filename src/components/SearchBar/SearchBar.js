@@ -9,6 +9,7 @@ const SearchBar = ({cityData}) => {
   const [city, setCity] = useState('');
 
   const handleSearch = async () => {
+    // When the search button is pressed, it sends a request to the API using the fetchWeatherDataByCity function with the name of the searched city, and assigns the returned data to the cityData.
     const data = await fetchWeatherDataByCity(city);
     cityData(data);
   };
