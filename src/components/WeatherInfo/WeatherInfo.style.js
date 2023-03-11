@@ -5,15 +5,7 @@ export default StyleSheet.create({
     flex: 1,
     paddingTop: 20,
   },
-  loc_time_container: {
-    // borderWidth: 1,
-    // borderRadius: 10,
-    // borderColor: 'rgba(0,0,0,0.7)',
-    // backgroundColor: 'rgba(0,0,0,0.7)',
-    // marginHorizontal: 40,
-    // padding: 5,
-    // paddingTop: 10,
-  },
+  loc_time_container: {},
   location: {
     textAlign: 'center',
     fontWeight: 'bold',
@@ -29,11 +21,6 @@ export default StyleSheet.create({
   icon_desc_container: {
     alignItems: 'center',
     marginTop: 35,
-    // borderWidth: 1,
-    // borderColor: 'rgba(0,0,0,0.7)',
-    // marginHorizontal: 100,
-    // borderRadius: 10,
-    // backgroundColor: 'rgba(0,0,0,0.7)',
     marginBottom: 10,
   },
   weather_icon: {
@@ -96,12 +83,12 @@ export default StyleSheet.create({
   },
   bottom_info_containers: {
     borderWidth: 1,
-    borderColor: 'rgba(0,0,0,0.7)',
+    borderColor: 'rgba(0,0,0,0.6)',
     padding: 10,
     width: 130,
     height: 110,
     borderRadius: 10,
-    backgroundColor: 'rgba(0,0,0,0.7)',
+    backgroundColor: 'rgba(0,0,0,0.6)',
   },
   icons: {
     alignSelf: 'center',

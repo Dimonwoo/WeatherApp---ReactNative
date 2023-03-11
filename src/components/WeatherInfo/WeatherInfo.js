@@ -31,13 +31,13 @@ const WeatherInfo = ({weatherData}) => {
             name="water-percent"
             size={35}
             style={styles.icons}
-            color="blue"
+            color="#007a96"
           />
           <Text style={styles.humidity}>{main.humidity}%</Text>
           <Text style={styles.humidity}>Humidity</Text>
         </View>
         <View style={styles.bottom_info_containers}>
-          <Icon name="eye" size={35} style={styles.icons} color="green" />
+          <Icon name="eye" size={35} style={styles.icons} color="#00963e" />
           <Text style={styles.visiblity}>{visibility} m</Text>
           <Text style={styles.visiblity}>Visibility</Text>
         </View>
@@ -58,7 +58,7 @@ const WeatherInfo = ({weatherData}) => {
             name="windsock"
             size={35}
             style={styles.icons}
-            color="#BCAAA4"
+            color="#c04000"
           />
           <Text style={styles.wind_deg}>{wind.deg}°</Text>
           <Text style={styles.wind_deg}>Wind Deg</Text>

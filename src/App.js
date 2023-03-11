@@ -9,7 +9,6 @@ import {
 import Geolocation from '@react-native-community/geolocation';
 
 import {fetchWeatherData} from './hooks/fetchWeatherData';
-
 import Loading from './components/Loading/Loading';
 import WeatherInfo from './components/WeatherInfo/WeatherInfo';
 import SearchBar from './components/SearchBar/SearchBar';
@@ -29,12 +28,12 @@ const App = () => {
             setLoading(false);
           })
           .catch(error => {
-            Alert.alert('Bir hata oluştu!');
+            Alert.alert('Something went wrong!');
             setLoading(false);
           });
       },
       error => {
-        Alert.alert('Bir hata oluştu!');
+        Alert.alert('Something went wrong!');
         setLoading(false);
       },
       {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000},
@@ -51,7 +50,7 @@ const App = () => {
       Clouds: require('./assets/images/clouds.jpg'),
       Clear: require('./assets/images/sunny.jpg'),
       Snow: require('./assets/images/snow.jpg'),
-      default: require('./assets/images/night.jpg'),
+      default: require('./assets/images/default.jpg'),
     };
     const selectedImage = images[description] || images.default;
     return selectedImage;
