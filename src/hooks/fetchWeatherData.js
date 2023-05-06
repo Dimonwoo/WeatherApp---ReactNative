@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_KEY = '54fd8c05d6bb82948472a6779a824a46';
+const API_KEY = '*****';
 const BASE_URL = `https://api.openweathermap.org/data/2.5/weather?appid=${API_KEY}&units=metric`;
 
 // The fetchWeatherData function takes a latitude and longitude and returns weather data for those coordinates.
